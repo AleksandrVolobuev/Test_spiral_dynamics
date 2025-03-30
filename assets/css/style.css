@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  font-size: 18px; /* Увеличивает размер текста */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ae4477, #0aff5e, #102bff);
+  background-size: 500% 500%;
+  animation: gradient 30s ease infinite;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  
+  /* Для фона с изображением */
+  background-image: url('../audio/klipartz.com.png'), linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ae4477, #0aff5e, #102bff);
+  background-size: cover, 500% 500%;
+  background-position: center, center;
+  animation: imageMove 30s ease infinite, gradient 30s ease infinite;
+}
+
+/* Анимация для движения картинки */
+@keyframes imageMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Анимация для градиента */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+25% {
+  background-position: 25% 75%;
+}
+50% {
+  background-position: 50% 100%;
+}
+75% {
+  background-position: 25% 75%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+.question {
+  margin-bottom: 15px;
+}
+
+
+p {
+  font-size: 26px;
+  margin: 5px 0;
+  font-weight: bold;
+}

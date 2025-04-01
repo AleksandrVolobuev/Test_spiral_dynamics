@@ -51,7 +51,7 @@ function showQuestion() {
   quizContainer.innerHTML = `<p>${q.text}</p>`;
 
   // Создаём контейнер для ответов с `flex`
-  let answersHTML = `<div class="answers-container flex flex-col gap-6 px-10 py-6">`;
+  let answersHTML = `<div class="answers-container flex flex-col gap-1 px-10 py-1">`;
 
   // Перебираем все возможные ответы на вопрос
   q.answers.forEach((answer, i) => {
@@ -90,7 +90,7 @@ function nextQuestion() {
 // Функция для показа итогового результата теста
 function showResult() {
   const totalCategories = answers.length; // Количество типов
-  const step = (questions.length * 3) / totalCategories; // Интервал
+  const step = (questions.length * 7) / totalCategories; // Интервал
 
   // Переворачиваем шкалу (чем больше баллов, тем ближе к 0-й позиции)
   let index = totalCategories - 1 - Math.floor(score / step);
